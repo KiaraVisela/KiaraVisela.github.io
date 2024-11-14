@@ -2,42 +2,57 @@
 <html>
 <head>
 	<style type="text/css">
-		/*#back{
-			width:1500px;
-			height:1000px;
-			background-color: skyblue;*/
-/*		}*/
-		#project{
-			display:inline-block;
-			width:500px;
-			height:100px;
-			border:10px solid cornflowerblue;
-			background-color: skyblue;
-			/*background-image: url(https://t3.ftcdn.net/jpg/02/39/54/84/360_F_239548402_7WZPRebyuCHJAnpw3f4ne9tfVff1LKPJ.jpg);
-			background-size: contain;*/
+		body{
+			background-color:black;
 		}
-		#journal{
-/*			display:inline-block;*/
+		#back{
+			width:800px;
+			height:500px;
+			background-color: darkgrey;
+			position: relative;
+			border: 10px solid grey;
+/*			top: -400px;*/
+		}
+		.buttons{
 			width:500px;
 			height:100px;
 			margin: 10px;
+			position: relative;
+			top: -450px;
+		}
+		#project{
+/*			border-radius: 30%;*/
+			border:10px solid cornflowerblue;
+			background-color: skyblue;
+/*			position: relative;
+			top: -450px;*/
+		}
+		#journal{
+/*			display:inline-block;*/
+/*			width:500px;
+			height:100px;
+			margin: 10px;*/
 			background-color: pink;
 			border:10px solid lightpink;
+			/*position: relative;
+			top: -450px;*/
 		}
 		#animation{
 /*			display:inline-block;*/
-			width:500px;
+			/*width:500px;
 			height:100px;
-			margin: 15px;
+			margin: 15px;*/
 			background-color: lightsalmon;
 			border:10px solid lightcoral;
+			/*position: relative;
+			top: -450px;*/
 		}
 		#journal:hover{
 /*			display:inline-block;*/
 			width:500px;
 			height:100px;
 			padding: 5px;
-			border:10px solid lightcoral;
+			border:10px solid hotpink;
 
 		}
 		#project:hover{
@@ -45,7 +60,7 @@
 			width:500px;
 			height:100px;
 			padding:5px;
-			background-color: lightblue;
+			border-color: royalblue;
 			/*background-image: url(https://t3.ftcdn.net/jpg/02/39/54/84/360_F_239548402_7WZPRebyuCHJAnpw3f4ne9tfVff1LKPJ.jpg);
 			background-size: contain;*/
 		}
@@ -54,7 +69,7 @@
 			width:500px;
 			height:100px;
 			padding: 5px;
-			border:10px solid lightcoral;
+			border:10px solid indianred;
 
 
 	</style>
@@ -63,17 +78,21 @@
 <body>
 <!-- <div id="back"></div> -->
 	<center>
+
+<div id="back" ></div>
+
 <a href='Projects.html'>
-<div id="project"></div>	
+<div class=buttons id="project"></div>	
 </a>
 
 <a href='journal.html'>
-<div id="journal"></div>
+<div class=buttons id="journal"></div>
 </a>
 
-<a href='animation.html'>
-<div id="animation"></div>
+<a href=''>
+<div class=buttons></div>
 </a>
+
 </center>
 
 </body>

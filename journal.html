@@ -2,6 +2,14 @@
 <html>
 <head>
 	<style type="text/css">
+		h1{
+			font-size: 50px ;
+			font-family: monospace;
+			color:black;
+		}
+		h2{
+			font-size:20px ;
+		}
 		body{
 			background-color: pink;
 		}
@@ -15,13 +23,38 @@
 			top:0px;
 
 		}
+		.entries{
+			border:10px solid lightcoral;
+			background-color: ghostwhite;
+			width:90%;
+			height:125px;
+			position: relative;
+			left: 10px;
+			top:125px;
+		}
 
 	</style>
 
 </head>
 <body>
-	<div id="bar"> </div>
+	<div id="bar">
+		<h1> journal page </h1>
+ </div>
 
-	journal page 
+<div id="entry1" class="entries">
+	<h2>10/1/24 - Entry #1</h2>
+	<b>     Today we learned how to push your website so it updates on github. It looks very complicated but i feel like i can get the hang of it. 
+	 </b></div>
+	<div id="entry2" class="entries">
+	<h2>11/12/24 - Entry #2</h2>
+	<b>   I havent written one of these in a while. but im still working on my jumpscare project 
+	 </b><br>
+	<b> cd ./desktop/KiaraVisela.github.io<br>
+		git add .<br>
+		git commit -m "adding things"<br>
+		git push<br>
+	 </b>
+
+	</div>
 </body>
 </html>

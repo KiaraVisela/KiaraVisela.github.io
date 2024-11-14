@@ -12,7 +12,35 @@
 			background-color: white;
 			position: relative;
 			animation-duration: 20s;
+			animation-iteration-count: infinite;
 			animation-name: star;
+		}
+		#ball{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background-color: white;
+			position: relative;
+			animation-duration: 1s;
+			animation-name: strobe;
+			animation-iteration-count: infinite;
+	
+		}
+		@keyframes strobe{
+			0%{background-color:yellow ;
+			}
+			17.5%{ background-color: purple;			
+			}
+			35%{background-color: orange;
+			}
+			52.5%{background-color: blue;
+			}
+			70%{background-color: red;
+			}
+			87.5%{ background-color:green;
+			}
+			100%{background-color:yellow;
+			}
 
 		}
 		@keyframes star{
@@ -43,6 +71,7 @@
 <body>
 	animation page 
 	<div id="hi"></div>
+	<div id="ball"></div>
 </body>
 </html>
 

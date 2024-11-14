@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#survey{
+			width:500px;
+			height:100px;
+			border:10px solid cornflowerblue;
+			background-color: skyblue;
+			position: relative;
+		}
+		#load{
+			width:100px;
+			height:100px;
+			border-radius: 50%;
+			background-color: white;
+			animation-name: loading;
+			animation-duration:1s;
+			animation-iteration-count:infinite;
+			position: relative;
+			background-size:contain;
+		}
+		#fakeclown{
+			position: relative;
+			width:580px;
+			height:1000px;
+			background-image:url(https://static.wikia.nocookie.net/honkapedia/images/7/72/Party_Clown.jpg/revision/latest/scale-to-width-down/1750?cb=20200823023531);
+			background-size:contain;
+			background-color: white;
+			animation-name: scare1;
+			animation-duration:5s;
+			background-size:cover;
+			background-position: center;
+			animation-iteration-count: 1;
+		}
+
+		@keyframes loading{
+			0%{
+				transform:rotate(0deg)
+
+			}
+
+			90%{
+				transform:rotate(350deg);
+			}
+
+			100%{
+				transform:rotate(0deg);
+
+			}
+		}
+
+		@keyframes scare1{
+			0%{
+				top:1000px;
+			}
+
+			70%{
+				top: 1000px;
+			}
+
+			100%{
+				top: -100px;
+			}
+		}
+
+
+		
+
+
+	</style>
+	
+</head>
+<body>
+
+	<center>
+		click to take this quick survey 
+		<div id="survey">
+			
+		</div>	
+		<div id="load"></div>
+	
+		
+		<div id="fakeclown">
+			
+		</div>
+		<div id="jumpscare">
+			
+		</div>
+
+	</center>
+	<script type="text/javascript">
+		survey.addEventListener("click",
+			function(){
+				survey.style.backgroundColor= "white"
+				survey.style.border = "white"
+				load.style.backgroundColor = "blue"
+				load.style.backgroundImage="url(https://img.freepik.com/free-vector/loading-circles-blue-gradient_78370-2646.jpg)";
+			})
+
+
+	</script>
+</body>
+</html>
