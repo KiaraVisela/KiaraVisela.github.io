@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: lightpink;
+		}
+		.stars{
+			width: 75px;
+			height:75px;
+			top: -325px;
+			border:5px solid whitesmoke;
+			background-color:hotpink;
+			margin:5px;
+			display: inline-block;
+			background-size: contain;
+			position: relative;
+
+		}
+		#nameDiv{
+			font-size:100px;
+		}
+		#mail{
+			background-color:hotpink;
+			background-size:contain;
+			border: 10px solid red;
+			width: 500px;
+			height: 300px;
+			top:100px;
+		}
+		#envo{
+			background-color:hotpink;
+			background-size:contain;
+			border: 10px solid darkred;
+			position: absolute;
+			width: 500px;
+			height: 75px;
+			top: -100px;
+
+		}
+		/*#submit{
+			background-color:red;
+			border: 10px solid dark red;
+			width: 150px;
+			height: 100px;
+			top: -170px;
+			position: relative;
+		}*/
+		.heart{
+			background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png");
+			background-size:contain;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+		}
+
+	</style>
+	
+</head>
+<body>
+<center>
+	you got a letter 
+<div id="mail"></div>
+<div id="evnvo"></div>
+<button id="submit"> OPEN </button>
+<audio src="love.mp3" id="song"></audio>
+<div id="nameDiv"></div>
+
+</center>
+<script type="text/javascript">
+	let randomNumber; 
+	let flics = ["url(download-1.png)","url(download-2.jpg)","url(download-2.png)","url(download-3.jpg)","url(download-4.jpg)", "url(download-5.jpg)","url(download.jpg)","url(download-6.jpg)","url(download.png)","url(images-1.jpg)","url(images-2.jpg)","url(images-3.jpg)","url(images-4.jpg)","url(images-5.jpg)","url(images-6.jpg)","url(images-7.jpg)","url(images.jpg)","url(download-1.jpg)","url(download-6.jpg)","url(download-7.jpg)","url(download-8.jpg)","url(images.png)"]
+	let lightswitch = false
+
+	mail.addEventListener("click", function(){
+		lightswitch = true 
+		if(lightswitch == true){
+			song.play()
+			lightswitch = false 
+		}
+		else if (lightswitch ==false){
+			song.pause()
+			mail.style.backgroundColor = "pink"
+			lightswitch = true
+		}
+		function makeStar(){
+			let star = document.createElement("div")
+			document.body.appendChild(star)
+			star.classList.add("stars")
+			let R = 155+Math.random()*80
+			let G = 50+Math.random()*40
+			let B = 135+Math.random()*60
+			star.style.borderColor = "rgb("+R+","+G+","+B+")"
+			let R2 = 255
+			let G2 = 180+Math.random()*30
+			let B2 = 220+Math.random()*35
+			star.style.backgroundColor = "rgb("+R2+","+G2+","+B2+")"
+
+			randomNumber = Math.floor(Math.random()*flics.length)
+			star.style.backgroundImage= flics[randomNumber]
+		}
+		setInterval(makeStar,20)
+
+		function makeConfetti(){
+			let mini = document.createElement("div");
+			document.body.appendChild(mini);
+			mini.classList.add("heart");
+			mini.style.top=Math.random()*10 + "px"
+			mini.style.left=Math.random()*1500 + "px"
+			mini.style.height = mini.style.width = 15 + Math.random()*15 + "px"
+			function fall(){
+				mini.style.top=parseInt(mini.style.top)+(Math.random()*100)+"px"
+				if(parseInt(mini.style.top)>2500){
+					mini.style.top = "-100px"
+				}
+			}
+			setInterval(fall,100)
+		} // end of makeConfetting function
+		for(let i = 0; i<2000; i=i+1){
+			makeConfetti(i)
+			// dis.style.backgroundColor = "white"
+		}
+		
+	}//end of funciton inside event listener//
+	)// end of the eventListener
+
+
+		
+</script>
+</body>
+</html>

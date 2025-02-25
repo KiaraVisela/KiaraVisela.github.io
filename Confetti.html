@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.confetti{
+			background-color: pink;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			border: 1px solid black;
+			background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png");
+			background-size:contain;
+		}
+
+		#nameDiv{
+			font-size:100px;
+		}
+		/*#dis{
+			top: -45px;
+			position: relative;
+			width: 225px;
+			height: 50px;
+			border-color: "black";
+
+		}*/
+	</style>
+</head>
+<body>
+<center>
+put your name in <b><b>
+
+</center>
+<center>
+<input id="name1"></input> <button id="submit"> submit </button>
+
+<div id="nameDiv"></div>
+</center>
+<center>
+	<!-- <div id="dis"></div> -->
+
+
+<div id="container"></div>
+</center>
+<script type="text/javascript">
+
+
+
+	function makeConfetti(){
+			let sprinkle = document.createElement("div");
+			document.body.appendChild(sprinkle);
+			sprinkle.classList.add("confetti");
+			
+			sprinkle.style.width=Math.random()*20 + "px"
+			sprinkle.style.height=Math.random()*20 + "px"
+			sprinkle.style.top=Math.random()*50 + "px"
+			sprinkle.style.left=400+(Math.random()*500) + "px"
+			let R = 205+Math.random()*50
+			let G = 155+Math.random()*40
+			let B = 185+Math.random()*60
+			sprinkle.style.backgroundColor = "rgb("+R+","+G+","+B+")"
+			function fall(){
+				sprinkle.style.top=parseInt(sprinkle.style.top)+(Math.random()*100)+"px"
+			}
+			setInterval(fall,100)
+		} // end of makeConfetting function
+
+
+	submit.addEventListener("click", function(){
+		nameDiv.innerText = name1.value
+
+
+		for(let i = 0; i<1000; i=i+1){
+			makeConfetti(i)
+			// dis.style.backgroundColor = "white"
+		}
+	}//end of funciton inside event listener//
+	)// end of the eventListener
+
+
+		
+</script>
+</body>
+</html>

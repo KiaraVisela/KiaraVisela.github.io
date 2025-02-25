@@ -20,6 +20,13 @@
 			position: relative;
 			background-size:contain;
 		}
+		#redo{
+			height:500px;
+			width:500px;
+			background-color:darkred;
+
+
+		}
 		#fakeclown{
 			position: relative;
 			width:580px;
@@ -76,16 +83,13 @@
 	<center>
 		click to take this quick survey 
 		<div id="survey">
-			
 		</div>	
 		<div id="load"></div>
-	
-		
 		<div id="fakeclown">
-			
+		</div>
+		<div id="redo">
 		</div>
 		<div id="jumpscare">
-			
 		</div>
 
 	</center>
@@ -97,28 +101,33 @@
 				load.style.backgroundColor = "blue"
 				load.style.backgroundImage="url(https://img.freepik.com/free-vector/loading-circles-blue-gradient_78370-2646.jpg)";
 			})
+		redo.addEventListener("click",
+			function(){
+				redo.style.backgroundColor=""
+
+			})
 		// document.addEventListener("click", 
 		// 	function(){
-		document.addEventListener("click", 
-			function(){
-				let R = Math.random()*255
-				let G = Math.random()*255
-				let B = Math.random()*255
-				if(R<150){
-					R = 175 
-				}
-				if(G<150){
-					G = 175 
-				}
-				if(B<150){
-					B = 175 
-				}
-				document.body.style.backgroundColor = "rgb("+R+","+G+","+B+")"
-			})
+		// document.addEventListener("click", 
+		// 	function(){
+		// 		let R = Math.random()*255
+		// 		let G = Math.random()*255
+		// 		let B = Math.random()*255
+		// 		if(R<150){
+		// 			R = 175 
+		// 		}
+		// 		if(G<150){
+		// 			G = 175 
+		// 		}
+		// 		if(B<150){
+		// 			B = 175 
+		// 		}
+		// 		document.body.style.backgroundColor = "rgb("+R+","+G+","+B+")"
+		// 	})
 
-		function play(h){
-			alert(2*h + h/2)
-		}
+		// function play(h){
+		// 	alert(2*h + h/2)
+		// }
 		// play(6)
 
 	</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.umps{
+			height:100px;
+			width: 100px;
+			background-color:magenta;
+			position:absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="umps" id="jump"></div>
+	<div class="umps"id="dump"></div>
+	<div class="umps"id="gump"></div>
+	<div class="umps"id="hump"></div>
+
+	
+	<script type="text/javascript">
+		function changeColor(){
+			let R = Math.random()*255
+			let G = Math.random()*255
+			let B = Math.random()*255
+			jump.style.backgroundColor = "rgb("+R+","+G+","+B+")"	
+			dump.style.backgroundColor = "rgb("+R+","+G+","+B+")"
+			gump.style.backgroundColor = "rgb("+R+","+G+","+B+")"
+			hump.style.backgroundColor = "rgb("+R+","+G+","+B+")"
+		}
+			
+		function move(){
+			let x = Math.random()*1000
+			let y = Math.random()*1000
+			jump.style.left = x+"px"
+			jump.style.top = y+"px"
+		}
+		function move(){
+			let x = Math.random()*1000
+			let y = Math.random()*1000
+			gump.style.left = x+"px"
+			gump.style.top = y+"px"
+		}
+		function move(){
+			let x = Math.random()*1000
+			let y = Math.random()*1000
+			hump.style.left = x+"px"
+			hump.style.top = y+"px"
+		}
+		function move(){
+			let x = Math.random()*1000
+			let y = Math.random()*1000
+			dump.style.left = x+"px"
+			dump.style.top = y+"px"
+		}
+		setInterval(changeColor,100)
+		setInterval(move,100)
+
+
+	</script>
+
+</body>
+</html>

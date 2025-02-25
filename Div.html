@@ -1,1 +1,29 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<style type="text/css">
+		.stars{
+			width: 125px;
+			height:125px;
+			background-color:hotpink;
+			margin:5px;
+			display: inline-block;
+			background-size: contain;
+		}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function makeStar(){
+			let star = document.createElement("div")
+			document.body.appendChild(star)
+			star.classList.add("stars")
+		}
+		setInterval(makeStar,20)
+
+		</script>	
+
+</body>
+</html>

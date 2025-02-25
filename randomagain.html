@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: lavender;
+		}
+		#box{
+			height: 600px;
+			width: 600px;
+			border:15px solid white;
+			background-color: lavender;
+			background-image: url(px.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			
+		}
+		.months{
+			height: 50px;
+			width:100px;
+			background-color: mediumpurple;
+			margin: 5px;
+
+
+		}
+	</style>
+</head>
+<body>
+<center>
+Core Mems of 2024
+<div id = box ></div>
+
+</center>
+<!-- <div class= "months" id="jan"></div>
+<div class= "months" id="feb"></div>
+<div class= "months" id="mar"></div>
+<div class= "months" id="april"></div>
+<div class= "months" id="may"></div>
+<div class= "months" id="june"></div>
+<div class= "months" id="july1"></div>
+<div class= "months" id="july2"></div>
+<div class= "months" id="aug"></div>
+<div class= "months" id="sep"></div>
+<div class= "months" id="oct"></div>
+<div class= "months" id="nov"></div>
+<div class= "months" id="dec"></div> -->
+<center>
+
+guess what month this is (use all lowercase)
+<input id="month"></input> <button id="submit">submit</button>
+</center>
+
+<script type="text/javascript">
+
+	let randomNumber; 
+	let counter = 0;
+	let flics = ["url(jan.jpeg)", "url(feb.jpg)", "url(march.jpeg)", "url(april.jpeg)", "url(may.jpeg)", "url(June.JPG)", "url(july 1.JPG)", "url(july2.jpeg)", "url(aug.jpeg)", "url(sep.JPG)","url(oct.JPG)", "url(nov.JPG)", "url(dec.jpeg)"]
+
+
+	box.addEventListener("click", function(){
+		 randomNumber = Math.round(Math.random()*flics.length)
+		box.style.backgroundImage= flics[randomNumber]
+		 // box.style.backgroundImage=flics[0]
+		console.log(randomNumber)
+		// console.log(randomNumber)
+
+		// if (randomNumber==0){
+		// 	alert("january")
+		// }
+
+		// if (randomNumber==1){
+		// 	alert("feb")
+		// }
+
+		// if (randomNumber==2){
+		// 	alert("march")
+		// }
+
+
+	})
+
+
+	submit.addEventListener("click", function(){
+
+		if (randomNumber==0){
+			month.value="january"
+
+			counter= counter+1
+			box.style.border="17.5px solid lightgreen"
+			jan.style.border="5px solid green"
+		}
+
+		else {
+			alert("nope!")
+			box.style.border="17.5px solid pink"
+		}
+
+		if (randomNumber==1){
+			month.value="february"
+
+			counter= counter+1
+			//alert("correct")
+			box.style.border="17.5px solid lightgreen"
+		}
+
+		else {
+			alert("nope!")
+			box.style.border="17.5px solid pink"
+		}
+		if (randomNumber==2){
+			month.value="march"
+
+			counter= counter+1
+			//alert("correct")
+			box.style.border="17.5px solid lightgreen"
+		}
+
+		else {
+			alert("nope!")
+			box.style.border="17.5px solid pink"
+		}
+
+		if (randomNumber==2){
+			month.value="march"
+
+			alert("correct")
+		}
+
+		// if (randomNumber==1){
+		// 	month.value="february"
+		// }
+
+		})
+
+
+</script>
+
+</body>
+</html>
