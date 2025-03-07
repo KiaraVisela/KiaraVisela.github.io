@@ -5,24 +5,18 @@
 		body{
 			background-color: lightblue;
 		}
-		.smallprojectsmidblue{
-			width:200px;
-			height:200px;
+		.projects{
+			width:125px;
+			height:125px;
 			background-color: white;
 			position: relative;
 			margin:7px;
 			display:inline-block;
 			border:10px solid cornflowerblue;
-
-		}
-		.smallprojectsdarkblue{
-			width:200px;
-			height:200px;
-			background-color: white;
 			position: relative;
-			margin:7px;
 			display:inline-block;
-			border:10px solid royalblue;
+			background-size:contain;
+
 		}
 		#jumpscare{
 			background-image: url("https://media4.giphy.com/media/SLI4ap82ZgNnq/200w.gif?cid=82a1493b78p5j5k6xfn7a501s6no9n2iln2a8ev0nj5dijdd&ep=v1_gifs_related&rid=200w.gif&ct=g");
@@ -56,7 +50,7 @@
 	</style>
 </head>
 <body>
-	<a href='jumpscare.html'>
+	<!-- <a href='jumpscare.html'>
 	<div class="smallprojectsdarkblue" id="jumpscare">
 	</div></a>
 	<a href='animation.html'>
@@ -83,7 +77,49 @@
 	<div class="smallprojectsdarkblue"></div>
 	<div class="smallprojectsmidblue"></div>
 	<div class="smallprojectsdarkblue"></div>
-	<div class="smallprojectsmidblue"></div>
-	
+	<div class="smallprojectsmidblue"></div> -->
+
+	<script type="text/javascript">
+
+		function makeBlueDiv(y){
+			let box = document.createElement("div")
+			document.body.appendChild(box)
+			box.classList.add("projects")
+			box.id = "box" + y
+			// if(y%2 = 1){
+			// 	box.border = "10px solid cornflowerblue;"//fix later
+
+			// }
+			// if(y%2 = 0){
+			// 	box.border = "10px solid royalblue;"//fix later
+			// }
+
+		}
+		for(i=0;i<30;i++){
+			makeBlueDiv(i)
+		}
+		//jumpscare project href = Jumpscare.html
+		box0.style.backgroundImage= "url(https://media4.giphy.com/media/SLI4ap82ZgNnq/200w.gif?cid=82a1493b78p5j5k6xfn7a501s6no9n2iln2a8ev0nj5dijdd&ep=v1_gifs_related&rid=200w.gif&ct=g)";
+		//star project  href = animation.html
+		box1.style.backgroundImage="url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dd859d9b-ad45-47c0-9820-f352c43428a6/dg1s116-6291a7a5-9218-429e-8b70-f155ef7b8ff4.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RkODU5ZDliLWFkNDUtNDdjMC05ODIwLWYzNTJjNDM0MjhhNlwvZGcxczExNi02MjkxYTdhNS05MjE4LTQyOWUtOGI3MC1mMTU1ZWY3YjhmZjQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cG0O0oFgZSwTYzh_0gdUEFxINi1j3gnOsYqjO7n7Kek)";
+		//div project href = div.html
+		box2.style.backgroundColor = "pink"
+		//music player project href =
+		box3.style.backgroundImage = "url(https://i.pinimg.com/originals/0b/98/aa/0b98aa531b5b60704df56da9e17b7bea.jpg)";
+		//random project again href = randonagain.html
+		box4.style.backgroundColor = "purple"
+		//valentines day project href = valentines.html
+		box5.style.backgroundColor = "pink"
+		box5.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png)";
+		//confetti project href = Confetti.html
+		box6.style.backgroundImage = "url(https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/631252101DEC4D1DBC743AF147E24949/10713701_1.jpg)";
+		//first random project href = random.html
+		box7.style.backgroundImage = "url(https://media0.giphy.com/media/S2zkeFV1VwAlG/200w.gif?cid=6c09b9528be39n7w355u2n2pgb1sj4vttv629jodjq73bspd&ep=v1_gifs_search&rid=200w.gif&ct=g)";
+		//library slideshow href =libraryslieshow.html
+		box8.style.backgroundColor = "blue"
+		//switch.html 
+		box9.style.backgroundColor = "green"
+
+		</script>	
 </body>
 </html>

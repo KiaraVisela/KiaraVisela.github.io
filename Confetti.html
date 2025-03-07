@@ -9,8 +9,8 @@
 			height: 10px;
 			position: absolute;
 			border: 1px solid black;
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png");
-			background-size:contain;
+			/*background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png");
+			background-size:contain;*/
 		}
 
 		#nameDiv{
@@ -55,9 +55,12 @@ put your name in <b><b>
 			sprinkle.style.height=Math.random()*20 + "px"
 			sprinkle.style.top=Math.random()*50 + "px"
 			sprinkle.style.left=400+(Math.random()*500) + "px"
-			let R = 205+Math.random()*50
-			let G = 155+Math.random()*40
-			let B = 185+Math.random()*60
+			let R = 155+Math.random()*100
+			let G = 155+Math.random()*100
+			let B = 140+Math.random()*100
+			//let R = 205+Math.random()*50
+			// let G = 155+Math.random()*40
+			// let B = 185+Math.random()*60
 			sprinkle.style.backgroundColor = "rgb("+R+","+G+","+B+")"
 			function fall(){
 				sprinkle.style.top=parseInt(sprinkle.style.top)+(Math.random()*100)+"px"
@@ -68,8 +71,6 @@ put your name in <b><b>
 
 	submit.addEventListener("click", function(){
 		nameDiv.innerText = name1.value
-
-
 		for(let i = 0; i<1000; i=i+1){
 			makeConfetti(i)
 			// dis.style.backgroundColor = "white"
