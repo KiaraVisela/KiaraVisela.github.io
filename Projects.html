@@ -15,6 +15,7 @@
 			border:10px solid cornflowerblue;
 			position: relative;
 			display:inline-block;
+			background-color:red;
 			background-size:contain;
 
 		}
@@ -83,7 +84,10 @@
 
 		function makeBlueDiv(y){
 			let box = document.createElement("div")
-			document.body.appendChild(box)
+			let link = document.createElement("a")
+			link.href = "link"+y+".html"
+			document.body.appendChild(link)
+			link.appendChild(box)
 			box.classList.add("projects")
 			box.id = "box" + y
 			// if(y%2 = 1){
@@ -113,8 +117,9 @@
 		box5.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png)";
 		//confetti project href = Confetti.html
 		box6.style.backgroundImage = "url(https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/631252101DEC4D1DBC743AF147E24949/10713701_1.jpg)";
-		//first random project href = random.html
+		//first random project 
 		box7.style.backgroundImage = "url(https://media0.giphy.com/media/S2zkeFV1VwAlG/200w.gif?cid=6c09b9528be39n7w355u2n2pgb1sj4vttv629jodjq73bspd&ep=v1_gifs_search&rid=200w.gif&ct=g)";
+		
 		//library slideshow href =libraryslieshow.html
 		box8.style.backgroundColor = "blue"
 		//switch.html 

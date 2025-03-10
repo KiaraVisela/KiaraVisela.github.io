@@ -54,7 +54,7 @@ put your name in <b><b>
 			sprinkle.style.width=Math.random()*20 + "px"
 			sprinkle.style.height=Math.random()*20 + "px"
 			sprinkle.style.top=Math.random()*50 + "px"
-			sprinkle.style.left=400+(Math.random()*500) + "px"
+			sprinkle.style.left=(Math.random()*1000) + "px"
 			let R = 155+Math.random()*100
 			let G = 155+Math.random()*100
 			let B = 140+Math.random()*100
@@ -71,7 +71,7 @@ put your name in <b><b>
 
 	submit.addEventListener("click", function(){
 		nameDiv.innerText = name1.value
-		for(let i = 0; i<1000; i=i+1){
+		for(let i = 0; i<2000; i=i+1){
 			makeConfetti(i)
 			// dis.style.backgroundColor = "white"
 		}
