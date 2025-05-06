@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<!-- final project, GET HYPEEEEEE -->
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+<h1>HTML5 Canvas - Draw a Rectangle</h1>
+
+<canvas id="myCanvas" width="715" height="715" style="border:1px solid black;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+// background
+ctx.fillStyle = "blue";
+ctx.fillRect(0,0,715,715);
+// four columns 
+ctx.fillStyle = "white";
+ctx.fillRect(140,0,5,715);
+ctx.fillRect(280,0,5,715);
+ctx.fillRect(420,0,5,715);
+ctx.fillRect(560,0,5,715);
+// four rows
+ctx.fillStyle = "white";
+ctx.fillRect(0,140,715,5);
+ctx.fillRect(0,280,715,5);
+ctx.fillRect(0,420,715,5);
+ctx.fillRect(0,560,715,5);
+// circle
+ctx.strokeStyle = "black";
+ctx.lineWidth = 5;
+ctx.beginPath();
+ctx.arc(352.5, 352.5, 70, 0, 2 * Math.PI);
+ctx.stroke();
+</script>
+
+</body>
+</html>

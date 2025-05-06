@@ -1,45 +1,39 @@
-<!-- //confetti  -->
-
+<!-- CONFETTI GUN -->
+<!-- i want to do somthing with like confetti and a confetti gun or something -->
 <!DOCTYPE html>
 <html>
 <head>
 	<style>
+		body{
+			background-color: grey;
+		}
 		.confetti{
 			background-color: pink;
 			width: 10px;
 			height: 10px;
 			position: absolute;
 			border: 1px solid black;
-			/*background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png");
-			background-size:contain;*/
 		}
+		#confettiGun{
+			height: 100px;
+			width: 100px;
+			position: relative;
+			background-color: blue;
+			background-image: url("https://t3.ftcdn.net/jpg/00/92/20/22/360_F_92202204_WKiDxGOMQx66m89tWZxk0O0p9QOnCRyZ.jpg");
+			background-size:contain;
 
-		#nameDiv{
-			font-size:100px;
 		}
 
 	</style>
 </head>
 <body>
+	<!-- create divs here(name and class *center is optional)  -->
 <center>
-put your name in <b><b>
-
-</center>
-<center>
-<input id="name1"></input> <button id="submit"> submit </button>
-
-<div id="nameDiv"></div>
-</center>
-<center>
-	<!-- <div id="dis"></div> -->
+<div id="confettiGun"></div>
+</center>	
 
 
-<div id="container"></div>
-</center>
 <script type="text/javascript">
-
-
-
 	function makeConfetti(){
 			let sprinkle = document.createElement("div");
 			document.body.appendChild(sprinkle);
@@ -57,16 +51,17 @@ put your name in <b><b>
 			// let B = 185+Math.random()*60
 			sprinkle.style.backgroundColor = "rgb("+R+","+G+","+B+")"
 			function fall(){
+				let R = 225-Math.random()*10
+				let G = 155+Math.random()*20
+				let B = 140+Math.random()*50
 				sprinkle.style.top=parseInt(sprinkle.style.top)+(Math.random()*100)+"px"
+				sprinkle.style.left=parseInt(sprinkle.style.left)+(Math.random()*100)+"px"
 			}
 			setInterval(fall,100)
 		} // end of makeConfetting function
-
-
-	submit.addEventListener("click", function(){
-		nameDiv.innerText = name1.value
-		for(let i = 0; i<2000; i=i+1){
-			makeConfetti(i)
+	confettiGun.addEventListener("click", function(){
+	for(let i = 0; i<2000; i=i+1){
+		makeConfetti(i)
 			// dis.style.backgroundColor = "white"
 		}
 	}//end of funciton inside event listener//
