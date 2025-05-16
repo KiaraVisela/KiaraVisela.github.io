@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#cat{
+			width:100px;
+			height:200px;
+			background-image:url(https://i.gifer.com/Wkoh.gif);
+			background-position: center;
+			background-size:contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+		#go{
+			width:100px;
+			height:200px;
+			background-color: mediumpurple;
+
+		}
+		.snakes{
+			width: 125px;
+			height: 33px;
+			background-image:url(			https://miro.medium.com/v2/resize:fit:1400/1*PX9PsKDIL5QMHGlEf-jmoA.gif);
+
+			background-position: center;
+			background-size:contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+		.upSnakes{
+			width: 90px;
+			height: 160px;
+			background-image:url(	https://mir-s3-cdn-cf.behance.net/project_modules/source/cf498b186886629.657f84786b855.gif);
+
+			background-position: center;
+			background-size:contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="go"></div>
+	<div id="cat"></div>
+	<script type="text/javascript">
+		
+
+		function moveSnakeLeft(){
+			let snake = document.createElement("div");
+			document.body.appendChild(snake);
+			snake.classList.add("snakes");
+
+			snake.style.top=Math.random()*700 + "px"
+			snake.style.left=Math.random()*-5 + "px"
+			function fall(){
+				snake.style.left=parseInt(snake.style.left)+(Math.random()*50)+"px"
+			}
+			setInterval(fall,100)
+		}
+
+		function moveSnakeUp(){
+			let upSnake = document.createElement("div");
+			document.body.appendChild(upSnake);
+			upSnake.classList.add("upSnakes");
+
+			upSnake.style.top=Math.random()*5 +900 + "px"
+			upSnake.style.left=Math.random()*900 + "px"
+			function fall(){
+				upSnake.style.top=parseInt(upSnake.style.top)-(Math.random()*50)+"px"
+			}
+			setInterval(fall,100)
+		}
+		go.addEventListener("click", function(){
+			for(let i = 0; i<10; i=i+1){
+			moveSnakeUp(i)
+			moveSnakeLeft(i)
+			}
+		})
+		let cat = document.getElementById("cat")
+		cat.style.left="500px"
+		cat.style.top="350px"
+
+		document.addEventListener("keydown", function(event){
+			if (event.keyCode==39){
+			console.log(event.keyCode)
+			cat.style.left=parseInt(cat.style.left)+20+"px"
+			}
+			if (event.keyCode==37){
+			console.log(event.keyCode)
+			cat.style.left=parseInt(cat.style.left)-20+"px"
+			}
+			if (event.keyCode==38){
+			console.log(event.keyCode)
+			cat.style.top=parseInt(cat.style.top)-20+"px"
+			}
+			if (event.keyCode==40){
+			console.log(event.keyCode)
+			cat.style.top=parseInt(cat.style.top)+20+"px"
+			}
+			
+		})
+	</script>
+
+</body>
+</html>
